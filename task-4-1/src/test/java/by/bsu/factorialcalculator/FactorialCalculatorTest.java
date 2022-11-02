@@ -1,5 +1,6 @@
 package by.bsu.factorialcalculator;
 
+import by.bsu.exception.IncorrectParameter;
 import junit.framework.TestCase;
 
 import java.math.BigInteger;
@@ -10,7 +11,7 @@ public class FactorialCalculatorTest extends TestCase {
     private final FactorialCalculator calculator = new FactorialCalculator();
 
 
-    public void testGetFirstNFactorials() {
+    public void testGetFirstNFactorials() throws IncorrectParameter {
         int i = 0;
         List<BigInteger> result = calculator.getFirstNFactorials(i);
         List<BigInteger> expected = new ArrayList<>();
